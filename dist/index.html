@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Technical Documentation Page</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav id="navbar">
+  <header>CSS Styles Documentation</header>
+   <ul id="nav-list">
+     <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+     <li><a class="nav-link" href="#CSS_Structure">CSS Structure</a></li>
+     <li><a class="nav-link" href="#Adding_CSS_to_an_HTML_Page">Adding CSS to an HTML Page</a></li>
+     <li><a class="nav-link" href="#Cascade">Cascade</a></li>
+     <li><a class="nav-link" href="#Reference">Reference</a></li>
+   </ul>
+</nav>
+
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header><h2>Introduction</h2></header>
+    <article>
+      <p>CSS (an abbreviation of Cascading Style Sheets) is the language that we use to style an HTML file, and tell the browser how should it render the elements on the page.</p>
+      <p>A CSS file contains several CSS rules. Each rule is composed by 2 parts:</p>
+      <ul>
+        <li>the selector</li>
+        <li>the declaration block</li>
+      </ul>
+      
+      <p>The selector is a string that identifies one or more elements on the page, following a special syntax that we’ll soon talk about extensively. The declaration block contains one or more declarations, in turn composed by a property and valuepair. Those are all the things we have in CSS.</p>
+<p>Carefully organising properties, associating them values, and attaching those to specific elements of the page using a selector is the whole argument of this ebook.</p>
+    </article>
+  </section>
+  <section class="main-section" id="CSS_Structure">
+    <header><h2>CSS Structure</h2></header>
+    <article><p>A CSS rule set has one part called selector, and the other part called declaration. The declaration contains various rules, each composed by a property, and a value. In this example, <code>p</code> is the selector, and applies one rule which sets the value 20px to the font-size property:
+  <pre>
+    <code>
+     p {
+       font-size: 20px;
+       }
+    </code>
+   </pre>
+ <p>Multiple rules are stacked one after the other: </p>
+   <pre>
+    <code>
+    p {
+      font-size: 20px;
+      }
+
+    a {
+      color: blue;
+      }
+    </code>
+   </pre>
+  <p>and it can target HTML tags, like above, or HTML elements that contain a certain class attribute with <code>.my-class</code>, or HTML elements that have a specific <code>id </code>attribute with <code>#my-id.</code></p>
+      <p>More advanced selectors allow you to choose items whose attribute matches a specific value, or also items which respond to pseudo-classes.</p>
+  </article>
+  </section>
+  <section class="main-section" id="Adding_CSS_to_an_HTML_Page">
+    <header><h2>Adding CSS to an HTML Page</h2></header>
+    <article>
+      <p>CSS is attached to an HTML page in different ways:</p>
+      <ul>
+        <li>Using the <code>link</code> tag
+          <p>To use this method, you add a <code>link tag</code> with the href attribute pointing to the CSS file you want to include. You add it inside the head tag of the site (not inside the body tag):</p>
+        <pre>
+          <code>
+            &lt;link rel="stylesheet" type="text/css" href="myfile.css"&gt;
+          </code>
+        </pre>
+          <p>The <code>rel</code> and <code>type</code> attributes are required too, as they tell the browser which kind of file we are linking to.</p>
+        </li>
+      <li>Using the <code>Style</code> tag
+        <p>Instead of using the link tag to point to separate stylesheet containing our CSS, we can add the CSS directly inside a style tag. This is the syntax:</p>
+      <pre>
+        <code>
+         &lt;style&gt;
+          ...our CSS...
+         &lt;/style&gt;
+        </code>
+      </pre></li> </ul>
+    </article>
+  </section>
+  <section class="main-section" id="Cascade">
+    <header><h2>Cascade</h2></header>
+    <article><p>Cascade is a fundamental concept of CSS. After all, it’s in the name itself, the first C of CSS — Cascading Style Sheets — it must be an important thing.What does it mean? Cascade is the process, or algorithm, that determines the properties applied to each element on the page. Trying to converge from a list of CSS rules that are defined in various places.</p>
+
+  <p>It does so taking in consideration:</p>
+     <ul>
+       <li>spcificity</li>
+       <li>importance</li>
+       <li>inheritance</li>
+       <li>order in the file</li>
+    </ul>
+    </article>
+  </section>
+  <section class="main-section" id="Reference">
+    <header><h2>Reference</h2></header>
+    <ul>
+      <li>All the documentation from this page is taken from the <a href="https://www.freecodecamp.org/news/the-css-handbook-a-handy-guide-to-css-for-developers-b56695917d11/">CSS Handbook</a>.</li>
+    </ul>
+  </section>
+</main>
+<!-- partial -->
+  
+</body>
+</html>
