@@ -4,10 +4,10 @@
   width: 250px;
   border: 2px solid;
   position: fixed;
-  z-index: 1; 
+  z-index: 1;
   top: 0;
   left: 0;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
 #navbar > header {
@@ -22,15 +22,15 @@
 @media all and (max-width: 650px) {
   #navbar {
     height: 350px;
-    width: 100%;;
+    width: 100%;
     top: 0;
-    }
+  }
   #navbar > header {
-  position: fixed;
-  width: 100%;
-  background-color: white;
-  top: 0;
-  text-align: center;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    top: 0;
+    text-align: center;
   }
   #nav-list {
     height: 100%;
@@ -75,8 +75,14 @@ a:link {
   color: #000000;
 }
 
+#externalLink {
+  text-decoration: none;
+  border-bottom: #000 0.125em solid;
+}
+
 a:visited {
   text-decoration: none;
+  border-bottom: #000 0.125em solid;
   color: #000000;
 }
 
